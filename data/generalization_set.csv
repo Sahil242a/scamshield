@@ -1,0 +1,83 @@
+text,label,lang,sender,note
+"ICICI Bank: Your a/c will be debited Rs 1 for e-mandate registration. Approve only if initiated by you on the iMobile app.",0,en,VM-ICICIT,mandate
+"Rs 2,000.00 deposited in your PNB A/c XX9091 on 23-10-26 through UPI from SURESH KUMAR. Bal Rs 18,442.10",0,en,BP-PNBSMS,credit alert
+"LIC: Premium of Rs 12,450 for policy 872XXXX13 is due on 05-Nov-2026. Pay via licindia.in or LIC Pay Direct app.",0,en,AX-LICIND,insurance due
+"EPFO: Your contribution of Rs 3,600 for Sep-2026 has been credited to UAN XXXX4521. Check passbook on epfindia.gov.in",0,en,VM-EPFOHO,EPF credit
+"SIP of Rs 5,000 in Parag Parikh Flexi Cap Fund has been processed. Units will be allotted in 2 working days. -Groww",0,en,VM-GROWWI,mutual fund
+"Your FASTag linked to RJ14CX2231 has been debited Rs 115 at Shahjahanpur toll plaza. Avl bal Rs 640.",0,en,VM-FSTAGB,FASTag
+"PNR 2459013388: Train 12916 Ashram Express is running late by 1 hr 20 min. Expected departure 23:40.",0,en,VM-IRCTCI,train delay
+"IndiGo: Web check-in is open for 6E 2134 JAI-BLR on 28 Oct. Check in at goindigo.in to choose your seat.",0,en,VK-INDIGO,flight
+"Your lab report for CBC test is ready. Download it from the Dr Lal PathLabs app or lalpathlabs.com",0,en,VM-LPLLAB,lab report
+"Naukri: 12 new jobs match your profile 'Python Developer'. View and apply on the Naukri app.",0,en,VM-NAUKRI,job alert legit
+"UIDAI: Your Aadhaar address update request URN 1234/56789 has been completed successfully.",0,en,AX-UIDAIG,Aadhaar update
+"Income Tax Department: The last date to file ITR for AY 2026-27 is approaching. File at incometax.gov.in. Ignore if already filed.",0,en,VM-ITDEFL,real tax reminder - hard
+"New login to your Instagram account from Chrome on Windows in Jaipur. If this wasn't you, secure your account in the app.",0,en,,security alert - hard
+"Your HDFC Bank credit card statement for Oct is ready. Total due Rs 8,412, minimum due Rs 420, due date 12-Nov.",0,en,VM-HDFCBK,card statement
+"Share OTP 4821 with the delivery agent to receive your Amazon order. Do not share it over a call.",0,en,AX-AMAZON,delivery OTP - hard
+"Your ride OTP is 6624. Share it with your driver to start the trip. -Uber",0,en,VM-UBERIN,ride OTP - hard
+"Netflix: your monthly payment of Rs 649 via UPI AutoPay was successful.",0,en,VM-NFLIXI,subscription
+"Admit cards for the end-semester exams are now available on the student portal. -Exam Cell",0,en,,college notice
+"You received Rs 500 from Ankit Sharma on PhonePe. Check your balance in the app.",0,en,VM-PHONPE,money received - hard
+"Get flat 60% off on your first order with code WELCOME60. Order now on Zomato!",0,en,VM-ZOMATO,promo code - hard
+"Dear Parent, PTM is scheduled on Saturday 9 am to 12 pm. Kindly attend. -St. Xavier's School",0,en,,school
+"Your cheque no. 004512 for Rs 25,000 has been cleared. -Bank of Baroda",0,en,AD-BOBTXN,cheque
+"Mumbai Metro: Recharge of Rs 300 on your travel card was successful.",0,en,,metro
+"Hey, your Swiggy Instamart order will arrive in 12 minutes. Track it in the app.",0,en,VM-SWIGGY,delivery
+"Dear customer, Rs 1,999 cashback has been credited to your Amazon Pay balance for your festive purchase.",0,en,AX-AMAZON,legit cashback - hard
+"Ma'am, the plumber will come tomorrow at 11. Please keep someone at home.",0,en,9123004567,chat
+"Bhai mera result aa gaya, 8.9 CGPA! Party pakki",0,hinglish,9811122233,chat
+"Kal ki meeting 4 baje shift ho gayi hai, sab log time pe aa jana",0,hinglish,,work
+"Aapka PNR 2459013388 confirm hai, coach B3 seat 42. Yatra mangalmay ho.",0,hinglish,VM-IRCTCI,railway Hinglish
+"Beta, gas wala aaya tha, maine 950 de diye. Bata dena papa ko",0,hinglish,9415000011,family
+"Aapke Airtel number par 2GB data bacha hai. Aaj raat 12 baje tak use karein.",0,hinglish,AD-AIRTEL,data balance - hard
+"Driver aapke location par pahunch gaya hai. OTP 3381 driver ko batayein. -Ola",0,hinglish,VM-OLACAB,ride OTP Hinglish - hard
+"Bhaiya kal se do din ke liye doodh mat dena, hum bahar ja rahe hai",0,hinglish,,chat
+"Sir aapki gaadi ki service ho gayi hai, 5 baje tak le jaiye. Bill 3,450 hai.",0,hinglish,9876500011,service centre
+"Aapka Paytm wallet KYC successfully complete ho gaya hai. Dhanyavaad.",0,hinglish,VM-PAYTMB,KYC done - hard
+"Dost, 2000 bhej raha hu UPI pe, kal ke trip ke liye. Check kar lena",0,hinglish,9555011122,friend
+"आपकी LIC पॉलिसी की प्रीमियम 05 नवंबर को देय है। licindia.in पर भुगतान करें।",0,hi,AX-LICIND,insurance Hindi
+"आपके खाते में 1500 रुपये जमा हुए हैं। उपलब्ध शेष 12,340 रुपये। -SBI",0,hi,AX-SBIINB,credit Hindi
+"प्रिय ग्राहक, आपका Jio रिचार्ज सफल रहा। प्लान की वैधता 28 दिन है।",0,hi,JX-JIONET,recharge Hindi
+"नगर निगम: वर्ष 2026-27 का संपत्ति कर जमा करने की अंतिम तिथि 30 नवंबर है। ऑनलाइन भुगतान करें।",0,hi,,property tax Hindi
+"बेटा, मैं बाजार जा रही हूँ, कुछ चाहिए तो बता देना।",0,hi,,family Hindi
+"कल सुबह 6 बजे से 10 बजे तक पानी की सप्लाई बंद रहेगी। -जल विभाग",0,hi,,water outage - hard
+"आपकी ट्रेन 12916 एक घंटा देरी से चल रही है।",0,hi,VM-IRCTCI,train Hindi
+"मीटिंग कल 11 बजे है, सभी समय पर पहुंचें।",0,hi,,work Hindi
+"Dear Customer, an amount of Rs 49,999 has been debited from your SBI account. If not done by you, call our fraud team immediately at 9019283746",1,en,9019283746,fake debit callback
+"Your Amazon order of Apple iPhone 16 (Rs 89,999) is confirmed. If you did not place this order, call 8109283746 to cancel.",1,en,8109283746,fake order callback
+"Hi, I accidentally sent my 6 digit WhatsApp code to your number. Can you please send it back to me? It's urgent",1,en,9876123450,WhatsApp takeover
+"E-Challan: A traffic fine of Rs 500 is pending on your vehicle. Pay within 24 hours to avoid court action: echallan-parivahan.xyz",1,en,,fake challan
+"I am Major Vikram from the Indian Army, I want to buy your sofa listed on OLX. I will pay via QR code, just scan and enter PIN to receive.",1,en,8000111222,OLX army buyer
+"Congratulations, you are selected for the PM Scholarship Yojana 2026. Pay Rs 1,200 registration fee to claim Rs 50,000: pmscholarship-gov.online",1,en,,fake govt scheme
+"Your EPF claim of Rs 1,84,000 is on hold. Verify your UAN and bank details within 24 hrs at epfo-claim-status.info",1,en,,fake EPF
+"Dear customer, a new device has been added to your HDFC NetBanking. If this was not you, cancel immediately at hdfc-device-verify.co",1,en,7766001122,fake device alert
+"Your Airtel number will be blocked by DoT in 2 hours for illegal advertising. Press 9 to talk to the customer care officer.",1,en,,DoT threat
+"Your video call recording will be sent to all your contacts and posted online unless you pay Rs 25,000 now. Contact 9001122334",1,en,9001122334,video extortion
+"Earn Rs 50,000 per month from home by doing simple data entry. Pay Rs 999 for the registration kit and start today!",1,en,,data entry fee
+"Bitcoin trading bot gives 5% daily profit. Invest Rs 10,000 and withdraw Rs 50,000 in 10 days. Join now on Telegram @cryptoking_india",1,en,,crypto
+"Your LPG subsidy of Rs 2,400 is pending. Click to receive in your bank: lpg-subsidy-claim.site",1,en,,LPG subsidy
+"Dear user, your Google Pay account is restricted. Re-verify with your debit card details at gpay-help-centre.com",1,en,,GPay restricted
+"Sir I sent you the advance for the flat by mistake twice, please refund 15,000 to this UPI rohan.rent@okaxis",1,en,9988112233,rent mistake
+"Your Flipkart account won a Samsung Galaxy in today's spin. Pay shipping charges of Rs 199 to receive it.",1,en,,spin prize
+"Hello, we tried to deliver your BlueDart parcel. Reply with the OTP we just sent so the courier can verify your address.",1,en,7409112233,courier OTP ask
+"Mr. Sharma, your son has been arrested by the police in a drugs case. Send Rs 50,000 immediately to settle the matter, don't tell anyone.",1,en,+923001234567,fake arrest relative
+"Your SBI rewards worth Rs 9,870 are expiring. Install the SBI Rewardz app from this link to redeem: sbi-rewardz.apk",1,en,,reward APK
+"Good evening! I'm Nisha, a recruiter. We have remote work, 45 minutes daily, earn up to 9,000 per day. May I share details?",1,en,+6281234567890,task scam foreign
+"Mummy, mera phone gir ke toot gaya. Ye dost ka number hai, jaldi 10,000 bhej do, fees bharni hai",1,hinglish,9001234455,family new number
+"Aapka bijli bill pichle 2 mahine se pending hai, aaj raat connection kat jayega. Bijli officer se turant baat karein 9334455667",1,hinglish,9334455667,electricity Hinglish
+"Sir main Paytm head office se, aapka cashback 2,500 pending hai, jo request bheji hai usme UPI PIN daal kar accept karein",1,hinglish,8822001122,cashback PIN
+"Ghar baithe 30 minute kaam karke roz 3000 kamaye. Bas Google Maps pe review dena hai. Telegram pe message karo",1,hinglish,,review task
+"Aapka SIM card band hone wala hai, KYC ke liye AnyDesk download karke code bataye",1,hinglish,7012001122,SIM remote access
+"Badhai ho! Aapka naam Mahila Samman Yojana me aaya hai, 15000 lene ke liye 500 rupaye fees bhejein",1,hinglish,,fake scheme Hinglish
+"Aapke account se 25,000 kat gaye hai, agar aapne nahi kiya to turant is number par call karein 9878787878",1,hinglish,9878787878,fake debit Hinglish
+"Bhai mujhe galti se tera number pe OTP chala gaya, jaldi forward kar de",1,hinglish,9090123123,OTP forward ask
+"Customs ne aapka parcel pakda hai jisme illegal saman hai. Case band karwane ke liye turant 1 dabayein",1,hinglish,,customs IVR
+"Aapka Aadhaar card 2 ghante me block ho jayega, update karein: uidai-update-aadhar.in",1,hinglish,,Aadhaar lookalike
+"प्रिय ग्राहक, आपके खाते से 49,999 रुपये निकाले गए हैं। अगर यह आपने नहीं किया तो तुरंत 9123987654 पर कॉल करें।",1,hi,9123987654,fake debit Hindi
+"आपका बिजली कनेक्शन आज रात काट दिया जाएगा। बिल अपडेट नहीं हुआ है। अधिकारी से संपर्क करें 9456123789",1,hi,9456123789,electricity Hindi
+"बधाई हो! आपको प्रधानमंत्री योजना के तहत 50,000 रुपये मिलेंगे। रजिस्ट्रेशन शुल्क 999 रुपये भेजें।",1,hi,,scheme Hindi
+"आपका ई-चालान बकाया है। कोर्ट कार्यवाही से बचने के लिए आज ही भुगतान करें: echallan-pay.top",1,hi,,challan Hindi
+"घर बैठे काम करें, रोज 2000 से 5000 रुपये कमाएं। अभी व्हाट्सएप करें 9988776611",1,hi,9988776611,job Hindi
+"आपका सिम कार्ड 24 घंटे में बंद हो जाएगा। केवाईसी के लिए इस नंबर पर कॉल करें 8811223344",1,hi,8811223344,SIM Hindi
+"आपके बेटे को पुलिस ने पकड़ लिया है। छुड़ाने के लिए तुरंत 30,000 रुपये भेजें, किसी को मत बताना।",1,hi,+923339876543,fake arrest Hindi
+"आपको 5,000 रुपये का कैशबैक मिला है। पैसे पाने के लिए यूपीआई पिन डालें।",1,hi,,cashback PIN Hindi

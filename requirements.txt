@@ -1,0 +1,16 @@
+# Pinned so the trained model and the library that loads it always match.
+scikit-learn==1.9.1
+numpy==2.5.3
+scipy==1.18.1
+joblib==1.6.0
+pandas==3.0.5
+fastapi==0.161.1
+uvicorn==0.54.0
+httpx==0.28.1
+pydantic==2.13.5
+matplotlib==3.11.2
+pytest==9.1.1
+# Optional, for finetune_transformer.py (use Colab / a GPU):
+# torch>=2.2
+# transformers>=4.41
+# accelerate>=0.30

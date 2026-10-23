@@ -1,0 +1,6 @@
+{
+  "t_scam": 0.6994168426383721,
+  "t_suspicious": 0.3741482112877912,
+  "target_precision": 0.98,
+  "target_recall": 0.97
+}

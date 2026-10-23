@@ -1,0 +1,41 @@
+text,label,lang,note,p_scam,verdict
+"Dear Customer, your Kotak 811 account has been put on hold. Complete Video KYC today to avoid permanent closure: https://kotak811-vkyc.info",1,en,video KYC lookalike,1.0,SCAM
+Your BSES connection no. 1029384 will be disconnected at 9:45 PM tonight. Contact electricity dept. immediately 8340912765,1,en,electricity cut-off,0.9999,SCAM
+Aapka Paytm wallet aaj band hone wala hai. Turant KYC karne ke liye niche link pe jaayein tinyurl.com/ptmkyc,1,hinglish,Paytm KYC,0.9999,SCAM
+आपका गैस कनेक्शन बंद कर दिया जाएगा। केवाईसी अपडेट के लिए इस नंबर पर कॉल करें 9012345671,1,hi,gas KYC Hindi,0.9997,SCAM
+"Hello sir/madam, Amazon is hiring work from home staff. Salary 2000-5000 per day. Only 30 min work. Contact HR on WhatsApp 9182736450",1,en,task scam,0.9939,SCAM
+"Congratulations! Your SIM number has been selected for Rs 15,00,000 in the Airtel anniversary lottery. Claim ticket: wa.me/917788990011",1,en,lottery WhatsApp link,0.9825,SCAM
+"Sir maine galti se aapke number pe 2000 ka recharge kar diya hai, please wapas bhej dijiye, bahut zaroori hai",1,hinglish,mistaken recharge,0.89,SUSPICIOUS
+Your HDFC Bank NetBanking is locked due to 3 wrong attempts. Unlock now at hdfc-unlock-netbanking.com,1,en,lookalike domain,0.9873,SCAM
+"You have a pending Google Pay reward of ₹2,500. Approve the request and enter PIN to receive the reward",1,en,PIN to receive,0.9997,SCAM
+"This is DHL Express. Your shipment is held at Delhi customs for unpaid duty of Rs 1,450. Pay at dhl-clearance.top within 24 hrs",1,en,courier duty,0.9999,SCAM
+Officer Rajesh from CBI: an arrest warrant is issued in your name for money laundering. Stay on video call and do not tell anyone. Call 7409123456,1,en,digital arrest,0.9985,SCAM
+"Hi, I am Riya, financial analyst. Our WhatsApp group shares IPO and stock tips with 200% profit. Join free: chat.whatsapp.com/xyzabc",1,en,investment group,0.9954,SCAM
+"Beta mera phone kharab ho gaya, ye mera naya number hai. Hospital me hu, turant 8000 bhej do is number pe",1,hinglish,family emergency,0.9971,SCAM
+Your SBI credit card is eligible for a limit increase. Download SBI Card app from bit.ly/sbicardapk to activate today,1,en,APK shortener,0.997,SCAM
+"Dear customer, to receive your LIC maturity amount of Rs 3,45,000 pay a processing fee of Rs 2,999 to licpay@ybl",1,en,LIC fee,0.9976,SCAM
+आपका पैन कार्ड निष्क्रिय हो गया है। आयकर विभाग से बचने के लिए अभी लिंक करें http://pan-aadhaar-link.online,1,hi,PAN Hindi,1.0,SCAM
+Netflix: your payment was declined and your account will be suspended. Update card details at netflix-billing-help.site,1,en,non-Indian brand phish,0.9999,SCAM
+"Hello, your Swiggy refund of 649 is stuck. Install AnyDesk so our agent can process it",1,en,remote access refund,0.9761,SCAM
+"Bijli vibhag: aapka meter purana hai, naya smart meter lagwane ke liye 500 rupaye UPI karein bijlimeter@okaxis",1,hinglish,smart meter fee,0.9812,SCAM
+Want to earn from home? Rate 5 restaurants on Google and get paid 150 each. Message on Telegram t.me/ratepay_hr,1,en,task scam Telegram,0.9976,SCAM
+"Your Axis Bank a/c XX3381 is debited with INR 2,450.00 on 21-10-26 towards UPI/P2M/merchant. Not you? Call 18604195555",0,en,real debit,0.0361,SAFE
+"719204 is OTP for your Flipkart login. Do not share it with anyone, including Flipkart employees.",0,en,real OTP,0.0,SAFE
+"PNB never asks for your OTP, PIN or password. If you receive such a call, disconnect and report on 1930.",0,en,advisory,0.1487,SUSPICIOUS
+"Dear Consumer, your electricity bill of Rs 1,312.00 for Oct-26 has been generated. Due date: 08-Nov-26. -UPPCL",0,en,real bill,0.0002,SAFE
+Thank you for paying Rs 899.00 towards your Airtel postpaid bill. Your receipt has been sent to your email.,0,en,receipt,0.0055,SAFE
+Your Zepto order is packed and on the way! Arriving in 9 minutes.,0,en,delivery,0.0047,SAFE
+"Bhai kal raat ka khana mast tha, agli baar mera treat",0,hinglish,chat,0.0143,SAFE
+"Kal 10 baje lab me practical hai, record book le aana zaroor",0,hinglish,college,0.0156,SAFE
+"Main ghar pahunch gayi, phone ki battery khatam ho rahi hai",0,hinglish,chat,0.0175,SAFE
+"Bhai 250 bhej de, chai sutta ka hisaab barabar karte hai",0,hinglish,friend money,0.2317,SAFE
+"मम्मी, मैं हॉस्टल पहुँच गया हूँ। कल फोन करूँगा।",0,hi,family,0.0949,SAFE
+आपका सिलेंडर बुकिंग नंबर 4521 कन्फर्म हो गया है। -भारत गैस,0,hi,real gas booking,0.2053,SAFE
+Your interview with Infosys is scheduled for 28 Oct at 11:00 AM. Please carry your college ID.,0,en,interview,0.2589,SAFE
+Congrats! You've won the inter-college hackathon. Prize ceremony on Monday in the main auditorium.,0,en,legit 'won',0.6771,SUSPICIOUS
+Reminder: your library book is due tomorrow. Return it to avoid a fine.,0,en,reminder,0.0432,SAFE
+Your DigiLocker account has been linked with Aadhaar successfully. Access documents at digilocker.gov.in,0,en,official gov domain,0.1681,SAFE
+"Hey! Is this Arjun? It's Meera from school, got your number from Kavya",0,en,real reconnect - hard,0.0927,SAFE
+Your account will be charged Rs 199 for the Spotify Premium renewal on 30 Oct. Manage plan in the app.,0,en,subscription,0.1115,SAFE
+"Electricity board ka message aaya, kal subah 10 se 2 baje tak bijli nahi rahegi maintenance ki wajah se",0,hinglish,real outage notice,0.0255,SAFE
+"OTP mat batana kisi ko, aajkal bahut fraud calls aa rahe hai — papa",0,hinglish,parent warning,0.0183,SAFE

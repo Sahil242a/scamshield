@@ -1,0 +1,23 @@
+[project]
+name = "scamshield"
+version = "1.0.0"
+description = "UPI/SMS scam detector for English, Hindi and Hinglish, with explanations"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Prabhutva Gupta" }]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint.per-file-ignores]
+# message templates and test fixtures are natural-language data; wrapping them hurts readability
+"data/*.py" = ["E501"]
+"tests/*.py" = ["E501"]

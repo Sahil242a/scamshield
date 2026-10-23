@@ -1,0 +1,12 @@
+# Render Blueprint: New + > Blueprint > connect this repo. Free plan sleeps after ~15 min idle.
+services:
+  - type: web
+    name: scamshield
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: SCAMSHIELD_PUBLIC
+        value: "1"
+      - key: SCAMSHIELD_RATE_LIMIT
+        value: "30"

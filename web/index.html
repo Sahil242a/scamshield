@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScamShield — SMS scam check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Instrument+Sans:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f1ea; --ink: #1c1b19; --muted: #6b665c; --card: #fffdf8; --line: #ddd6c8;
+    --scam: #c2341b; --scam-bg: #fbe9e4; --warn: #a86a00; --warn-bg: #fbf0d9; --safe: #1f7a4d; --safe-bg: #e3f2e9;
+    --accent: #1c1b19;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #151412; --ink: #eeeae2; --muted: #a29c90; --card: #1e1d1a; --line: #34312c;
+      --scam: #ff7a5c; --scam-bg: #3a1d16; --warn: #f0b544; --warn-bg: #3a2c12; --safe: #5fd39a; --safe-bg: #123024; --accent: #eeeae2; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.5 "Instrument Sans", "Noto Sans Devanagari", system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 28px; }
+  h1 { font-size: 28px; margin: 0; letter-spacing: -0.02em; }
+  h1 span { font-family: "IBM Plex Mono", monospace; font-weight: 400; font-size: 14px; color: var(--muted); margin-left: 8px; }
+  .help { font-size: 14px; color: var(--muted); }
+  label { font-weight: 600; font-size: 14px; display: block; margin-bottom: 6px; }
+  textarea, input { width: 100%; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+    border-radius: 6px; padding: 12px; font: inherit; }
+  textarea { min-height: 130px; resize: vertical; }
+  textarea:focus, input:focus { outline: 2px solid var(--ink); outline-offset: 1px; }
+  .row { display: grid; grid-template-columns: 1fr auto; gap: 12px; margin-top: 12px; align-items: end; }
+  button { background: var(--accent); color: var(--bg); border: 0; border-radius: 6px; padding: 12px 22px;
+    font: 600 15px "Instrument Sans", sans-serif; cursor: pointer; height: 48px; }
+  button:disabled { opacity: .5; cursor: wait; }
+  .samples { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .samples button { background: transparent; color: var(--ink); border: 1px solid var(--line); height: auto;
+    padding: 6px 10px; font-weight: 400; font-size: 13px; border-radius: 999px; }
+  .samples button:hover { border-color: var(--ink); }
+  #result { margin-top: 30px; display: none; border-radius: 8px; border: 1px solid var(--line); background: var(--card); overflow: hidden; }
+  .verdict { padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .verdict h2 { margin: 0; font-size: 26px; letter-spacing: 0.02em; }
+  .SCAM .verdict { background: var(--scam-bg); color: var(--scam); }
+  .SUSPICIOUS .verdict { background: var(--warn-bg); color: var(--warn); }
+  .SAFE .verdict { background: var(--safe-bg); color: var(--safe); }
+  .meter { font-family: "IBM Plex Mono", monospace; font-size: 13px; text-align: right; }
+  .bar { width: 160px; height: 6px; background: color-mix(in srgb, currentColor 20%, transparent); border-radius: 3px; margin-top: 6px; }
+  .bar i { display: block; height: 100%; background: currentColor; border-radius: 3px; }
+  .body { padding: 6px 20px 20px; }
+  h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 18px 0 8px; }
+  ul { margin: 0; padding-left: 18px; }
+  li { margin: 6px 0; }
+  code { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; background: var(--bg); padding: 1px 5px; border-radius: 3px; word-break: break-all; }
+  .advice { margin-top: 18px; padding: 12px 14px; border-left: 3px solid var(--ink); background: var(--bg); font-size: 15px; }
+  .meta { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: var(--muted); margin-top: 14px; }
+  .fb { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); display: flex; flex-wrap: wrap;
+    gap: 8px; align-items: center; font-size: 14px; color: var(--muted); }
+  .fb button { height: auto; padding: 6px 12px; font-size: 13px; font-weight: 600; background: transparent;
+    color: var(--ink); border: 1px solid var(--line); }
+  .fb button:hover { border-color: var(--ink); }
+  footer { margin-top: 40px; font-size: 13px; color: var(--muted); }
+  @media (max-width: 520px) { .row { grid-template-columns: 1fr; } .bar { width: 110px; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>ScamShield<span>sms · upi · whatsapp</span></h1>
+    <div class="help">English · हिन्दी · Hinglish</div>
+  </header>
+
+  <label for="text">Paste the message</label>
+  <textarea id="text" placeholder="e.g. Priy grahak, aapka bijli connection aaj raat kaat diya jayega…"></textarea>
+  <div class="row">
+    <div>
+      <label for="sender">Sender (optional)</label>
+      <input id="sender" placeholder="VM-HDFCBK or 9876543210">
+    </div>
+    <button id="go">Check message</button>
+  </div>
+
+  <div class="samples" id="samples"></div>
+  <section id="result" aria-live="polite"></section>
+
+  <footer>Lost money to a scam? Call <strong>1930</strong> or report at cybercrime.gov.in. Messages are analysed in memory and not stored, unless you press a correction button (saved only on this computer, in data/feedback.csv).</footer>
+</main>
+<script>
+const SAMPLES = [
+  ["Bijli cut-off", "Priy upbhokta aaj raat 9:30 baje aapki bijli kaat di jayegi. Turant bijli adhikari se sampark karein 9123456789", "9123456789"],
+  ["KYC (Hindi)", "प्रिय ग्राहक, आपका SBI खाता आज बंद कर दिया जाएगा। तुरंत KYC अपडेट करें: http://sbi-kyc-update.xyz", ""],
+  ["PIN to receive", "You have received Rs 4,500 cashback. Enter your UPI PIN to receive the money.", ""],
+  ["Real OTP", "482913 is your OTP for payment of Rs 1,250.00 at Swiggy. Do not share with anyone. -HDFC Bank", "VM-HDFCBK"],
+  ["Debit alert", "Rs.399 debited from A/c XX4567 on 22-Oct-26 to VPA swiggy@ybl. UPI Ref 629384756123. Not you? Call 18001234 -SBI", "AX-SBIUPI"],
+  ["Friend chat", "Bhai 250 bhej de UPI pe, kal chai ka hisaab kar lenge", "9876012345"],
+];
+const $ = id => document.getElementById(id);
+let FEEDBACK_ENABLED = false;
+fetch("/health").then(r => r.json()).then(h => {
+  FEEDBACK_ENABLED = !!h.feedback_enabled;
+  if (!FEEDBACK_ENABLED) document.querySelector("footer").innerHTML =
+    "Public demo. Lost money to a scam? Call <strong>1930</strong> or report at cybercrime.gov.in. " +
+    "Messages are analysed in memory and never stored.";
+}).catch(() => {});
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+SAMPLES.forEach(([name, text, sender]) => {
+  const b = document.createElement("button");
+  b.textContent = name;
+  b.onclick = () => { $("text").value = text; $("sender").value = sender; check(); };
+  $("samples").appendChild(b);
+});
+async function check() {
+  const text = $("text").value.trim();
+  if (!text) return;
+  $("go").disabled = true;
+  try {
+    const r = await fetch("/analyze", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text, sender: $("sender").value.trim() || null }) });
+    if (r.status === 429) throw new Error("Too many checks in a minute — please wait a moment and try again.");
+    if (!r.ok) throw new Error(await r.text());
+    render(await r.json());
+  } catch (e) {
+    $("result").style.display = "block";
+    $("result").className = "";
+    $("result").innerHTML = `<div class="body"><p>${esc(e.message)}</p></div>`;
+  } finally { $("go").disabled = false; }
+}
+function render(v) {
+  const pct = Math.round(v.scam_probability * 100);
+  const list = (items, ev) => `<ul>${items.map(r => `<li>${esc(r.why)}${ev && r.evidence ? ` <code>${esc(r.evidence)}</code>` : ""}</li>`).join("")}</ul>`;
+  let html = `<div class="verdict"><h2>${v.label}</h2><div class="meter">scam probability ${pct}%<div class="bar"><i style="width:${pct}%"></i></div></div></div><div class="body">`;
+  if (v.reasons.length) html += `<h3>Why it looks like a scam</h3>${list(v.reasons, true)}`;
+  if (v.model_keywords.length && v.label !== "SAFE") html += `<h3>Wording the model flagged</h3><p>${v.model_keywords.map(k => `<code>${esc(k)}</code>`).join(" ")}</p>`;
+  if (v.trust_signals.length) html += `<h3>Signs it may be genuine</h3>${list(v.trust_signals, false)}`;
+  html += `<div class="advice">${esc(v.advice)}</div>`;
+  if (FEEDBACK_ENABLED) html += `<div class="fb" id="fb">Wrong verdict? It's actually
+    <button data-l="scam">a scam</button><button data-l="legit">genuine</button></div>`;
+  html += `<div class="meta">language: ${esc(v.language)} · text-model p=${v.text_model_probability} · ${v.latency_ms} ms</div></div>`;
+  $("result").className = v.label;
+  $("result").innerHTML = html;
+  $("result").style.display = "block";
+  document.querySelectorAll("#fb button").forEach(b => b.onclick = () => sendFeedback(b.dataset.l, v.label));
+}
+async function sendFeedback(label, predicted) {
+  try {
+    const r = await fetch("/feedback", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: $("text").value.trim(), sender: $("sender").value.trim() || null,
+                             correct_label: label, predicted }) });
+    const j = await r.json();
+    $("fb").textContent = `Saved on this computer (${j.total_corrections} correction${j.total_corrections === 1 ? "" : "s"} so far). ` +
+      "Run python data/build_dataset.py then python train.py to teach the model.";
+  } catch (e) { $("fb").textContent = "Couldn't save the correction: " + e.message; }
+}
+$("go").onclick = check;
+$("text").addEventListener("keydown", e => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) check(); });
+</script>
+</body>
+</html>
