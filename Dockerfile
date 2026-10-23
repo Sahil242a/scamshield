@@ -7,6 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 \
 # Hugging Face Spaces runs containers as uid 1000; a non-root user is good practice everywhere
 RUN useradd -m -u 1000 app
 WORKDIR /app
+RUN chown app:app /app
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
