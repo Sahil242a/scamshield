@@ -1,7 +1,7 @@
 # ScamShield — UPI / SMS scam detector for English, Hindi \& Hinglish
 
 [!\[CI](https://github.com/Sahil242a/scamshield/actions/workflows/ci.yml/badge.svg)](https://github.com/Prabhutvax/scamshield/actions/workflows/ci.yml)
-**Live demo:** *add your Hugging Face Space or Render URL here*
+**Live demo:https://scamshield-dgkl.onrender.com
 
 Flags fake "KYC expired", "bijli kat jayegi", "you won KBC lottery", "enter PIN to receive" and similar messages,
 and **explains why** in plain language. Built to keep false alarms on real bank messages (OTPs, debit alerts,
